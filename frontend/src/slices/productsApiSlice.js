@@ -10,7 +10,14 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       // keepUnusedDataFor: It will keep your data cache for after the last component unsubscribes for Number of seconds
       keepUnusedDataFor: 5,
     }),
+    getProductDetails: builder.query({
+      query: (productId) => ({
+        url: `${PRODUCTS_URL}/${productId}`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
   }),
 });
 
-export const { useGetProductsQuery } = productsApiSlice;
+export const { useGetProductsQuery, useGetProductDetailsQuery } =
+  productsApiSlice;
