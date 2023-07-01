@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 import {
-  createOrderItems,
+  addOrderItems,
   getMyOrders,
   getOrderById,
   updateOrderToPaid,
@@ -10,10 +10,7 @@ import {
 } from "../controllers/orderControllers.js";
 import { protect, admin } from "../middleware/authMiddleware.js";
 
-router
-  .route("/")
-  .post(protect, createOrderItems)
-  .get(protect, admin, getOrders);
+router.route("/").post(protect, addOrderItems).get(protect, admin, getOrders);
 
 router.route("/mine").get(protect, getMyOrders);
 
