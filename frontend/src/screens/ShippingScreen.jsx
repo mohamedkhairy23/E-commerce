@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FormContainer from "../components/FormContainer";
-import { Button, Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { saveShippingAddress } from "../slices/cartSlice";
@@ -31,7 +31,7 @@ const ShippingScreen = () => {
       <CheckoutSteps step1 step2 />
       <h1>Shipping</h1>
 
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Form.Group controlId="address" className="my-2">
           <Form.Label>Address</Form.Label>
           <Form.Control
@@ -72,7 +72,7 @@ const ShippingScreen = () => {
         <Button type="submit" variant="primary" className="my-2">
           Continue
         </Button>
-      </form>
+      </Form>
     </FormContainer>
   );
 };
