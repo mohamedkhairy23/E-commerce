@@ -37,7 +37,7 @@ const PlaceOrderScreen = () => {
 
       console.log(res);
       dispatch(clearCartItems());
-      navigate(`/orders/${res._id}`);
+      navigate(`/order/${res._id}`);
     } catch (err) {
       toast.error(err);
     }
@@ -54,7 +54,7 @@ const PlaceOrderScreen = () => {
               <h2>Shipping</h2>
               <p>
                 <strong>Address:</strong>
-                {cart.shippingAddress.address}, {cart.shippingAddress.city},{" "}
+                {cart.shippingAddress.address}, {cart.shippingAddress.city}{" "}
                 {cart.shippingAddress.postalCode},{" "}
                 {cart.shippingAddress.country}
               </p>
