@@ -40,7 +40,7 @@ const PaymentScreen = () => {
               type="radio"
               className="my-2"
               label="PayPal or Credit Card"
-              id="PayPal"
+              id={paymentMethod}
               name="paymentMethod"
               value="PayPal"
               checked
