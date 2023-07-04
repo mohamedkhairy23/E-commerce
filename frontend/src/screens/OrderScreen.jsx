@@ -6,8 +6,8 @@ import {
   ListGroup,
   Image,
   Card,
-  Form,
   Button,
+  Form,
 } from "react-bootstrap";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
@@ -39,8 +39,8 @@ const OrderScreen = () => {
     isLoading: loadingPayPalClient,
     error: errorPayPalClient,
   } = useGetPayPalClientIdQuery();
-
   // console.log(paypalClient?.clientId);
+
   const { userInfo } = useSelector((state) => state.auth);
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const OrderScreen = () => {
     <>
       <h1>Order {order?._id}</h1>
       <Row>
-        <Col md={8}>
+        <Col md={7}>
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h2>Shipping</h2>
@@ -175,7 +175,7 @@ const OrderScreen = () => {
             </ListGroup.Item>
           </ListGroup>
         </Col>
-        <Col md={4}>
+        <Col md={5}>
           <Card>
             <ListGroup variant="flush">
               <ListGroup.Item>
