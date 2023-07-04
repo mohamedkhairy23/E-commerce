@@ -46,7 +46,7 @@ const CartScreen = () => {
             {cartItems.map((cartItem) => (
               <ListGroup.Item key={cartItem._id}>
                 <Row>
-                  <Col md={2}>
+                  <Col md={2} lg={1}>
                     <Image
                       src={cartItem.image}
                       alt={cartItem.name}
@@ -85,7 +85,7 @@ const CartScreen = () => {
                   <Col md={2}>
                     <Button
                       type="button"
-                      variant="light"
+                      varient="light"
                       onClick={() => removeFromCartHandler(cartItem._id)}
                     >
                       <FaTrash />
