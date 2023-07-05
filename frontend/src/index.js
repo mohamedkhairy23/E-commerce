@@ -26,23 +26,27 @@ import OrderScreen from "./screens/OrderScreen";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { HelmetProvider } from "react-helmet-async";
 import ProfileScreen from "./screens/ProfileScreen";
+import AdminRoute from "./components/AdminRoute";
+import OrderListScreen from "./screens/Admin/OrderListScreen";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomeScreen />} />
       <Route path="/product/:id" element={<ProductScreen />} />
-      <Route path="/cart" element={<CartScreen />} />{" "}
-      <Route path="/login" element={<LoginScreen />} />{" "}
+      <Route path="/cart" element={<CartScreen />} />
+      <Route path="/login" element={<LoginScreen />} />
       <Route path="/register" element={<RegisterScreen />} />
       <Route path="" element={<PrivateRoute />}>
         <Route path="/shipping" element={<ShippingScreen />} />
         <Route path="/payment" element={<PaymentScreen />} />
-        <Route path="/placeorder" element={<PlaceOrderScreen />} />{" "}
-        <Route path="/profile" element={<ProfileScreen />} />{" "}
+        <Route path="/placeorder" element={<PlaceOrderScreen />} />
+        <Route path="/profile" element={<ProfileScreen />} />
         <Route path="/order/:id" element={<OrderScreen />} />
       </Route>
-      <Route />
+      <Route path="" element={<AdminRoute />}>
+        <Route path="/admin/orderlist" element={<OrderListScreen />} />
+      </Route>
     </Route>
   )
 );
