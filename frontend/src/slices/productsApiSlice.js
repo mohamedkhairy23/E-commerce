@@ -7,7 +7,7 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       query: () => ({
         url: PRODUCTS_URL,
       }),
-      // keepUnusedDataFor: It will keep your data cache for after the last component unsubscribes for Number of seconds
+      // keepUnusedDataFor: It will keep your data cached for after the last component unsubscribes for Number of seconds
       keepUnusedDataFor: 5,
     }),
     getProductDetails: builder.query({
@@ -16,8 +16,20 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       }),
       keepUnusedDataFor: 5,
     }),
+    createProduct: builder.mutation({
+      query: () => ({
+        url: PRODUCTS_URL,
+        method: "POST",
+      }),
+      // invalidatesTags property will stop data from being cached so that we have fresh data.
+      // without invalidatesTags property we will have to reload the page after we click create new product.
+      invalidatesTags: ["Product"],
+    }),
   }),
 });
 
-export const { useGetProductsQuery, useGetProductDetailsQuery } =
-  productsApiSlice;
+export const {
+  useGetProductsQuery,
+  useGetProductDetailsQuery,
+  useCreateProductMutation,
+} = productsApiSlice;
