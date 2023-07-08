@@ -57,6 +57,8 @@ const ProductScreen = () => {
       setComment("");
     } catch (err) {
       toast.error(err?.data?.message || err.error);
+      setRating(0);
+      setComment("");
     }
   };
 
