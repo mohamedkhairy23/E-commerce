@@ -9,11 +9,11 @@ Features:
 - Top-rated products carousel
 - Pagination functionality on (Products - Users - Orders)
 - Search functionality
-- User profile with logged-in user orders
+- User profile with user orders
 - Admin product management
 - Admin user management
 - Admin Order details page
-- Mark orders as a delivered option
+- Mark orders as a delivered feature for admin
 - Checkout process (shipping, payment method)
 - PayPal / Credit card integration
 - Database seeder (products & users)
