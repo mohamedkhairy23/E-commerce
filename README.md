@@ -5,8 +5,9 @@ Features:
 - React-Bootstrap UI library
 - Full-featured shopping cart
 - Product reviews and ratings
-- Top products carousel
-- Pagination and Search
+- Top-rated products carousel
+- Pagination functionality on (Products - Users - Orders)
+- Search functionality
 - User profile with logged-in user orders
 - Admin product management
 - Admin user management
