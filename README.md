@@ -10,9 +10,9 @@ Features:
 - Pagination functionality on (Products - Users - Orders)
 - Search functionality
 - User profile with user orders
-- Admin product management
-- Admin user management
-- Admin Order details page
+- Product management for admin
+- User management for admin
+- Order details page for user and admin
 - Mark orders as a delivered feature for admin
 - Checkout process (shipping, payment method)
 - PayPal / Credit card integration
