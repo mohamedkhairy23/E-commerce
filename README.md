@@ -3,6 +3,7 @@ Features:
 - JWT authentication (JSON web tokens) with HTTP-Only cookie
 - Redux tool kit for managing global state
 - React-Bootstrap UI library
+- Multer for uploading files on the server
 - Full-featured shopping cart
 - Product reviews and ratings
 - Top-rated products carousel
