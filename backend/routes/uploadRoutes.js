@@ -26,7 +26,13 @@ function checkFileType(file, cb) {
   }
 }
 
-const upload = multer({ storage });
+const upload = multer({
+  storage: storage,
+  limits: { fileSize: 1000000 },
+  fileFilter: function (req, file, cb) {
+    checkFileType(file, cb);
+  },
+});
 
 router.post("/", upload.single("image"), (req, res) => {
   res.send({
@@ -34,5 +40,16 @@ router.post("/", upload.single("image"), (req, res) => {
     image: `/${req.file.path}`,
   });
 });
+
+router.post(
+  "/uploadMultipleImages",
+  upload.array("images", 12),
+  function (req, res, next) {
+    res.send({
+      message: "Image Uploaded Successfully",
+      images: `/${req.file.path}`,
+    });
+  }
+);
 
 export default router;

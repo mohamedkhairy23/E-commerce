@@ -8,7 +8,7 @@ export const productsApiSlice = apiSlice.injectEndpoints({
         url: PRODUCTS_URL,
         params: { pageNumber, keyword },
       }),
-      // keepUnusedDataFor property will keep your data cached for after the last component unsubscribes for Number of seconds
+      // keepUnusedDataFor property will cach data for 5 seconds
       keepUnusedDataFor: 5,
       // Without providesTags property we will have to reload page when add and edit a product
       providesTags: ["Products"],
