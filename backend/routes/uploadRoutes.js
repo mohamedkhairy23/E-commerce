@@ -46,8 +46,10 @@ router.post(
   upload.array("images", 12),
   function (req, res, next) {
     res.send({
-      message: "Image Uploaded Successfully",
-      images: `/${req.file.path}`,
+      message: "Images Uploaded Successfully",
+      images: req.files.map((file) => {
+        return `/${file.path}`;
+      }),
     });
   }
 );
