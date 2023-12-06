@@ -8,7 +8,7 @@ Features:
 - Full-featured shopping cart
 - Product reviews and ratings
 - Top-rated products carousel
-- Pagination functionality on (Products - Users - Orders)
+- Pagination functionality
 - Search functionality
 - User profile with user orders
 - Product management for admin
