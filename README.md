@@ -1,6 +1,6 @@
-Project Demo Link https://proshop-h1le.onrender.com/
+## Project Demo Link https://proshop-h1le.onrender.com/
 
-Features:
+## Features:
 - JWT authentication (JSON web tokens) with HTTP-Only cookie
 - Redux tool kit for managing global state
 - React-Bootstrap UI library
@@ -18,6 +18,7 @@ Features:
 - Checkout process (shipping, payment method)
 - PayPal / Credit card integration
 - Database seeder (products & users)
+
 ![1](https://github.com/mohamedkhairy23/E-commerce/assets/82667987/e6269bfb-a64d-4a07-abba-2c4002db4bf9)
 ![Capture2](https://github.com/mohamedkhairy23/E-commerce/assets/82667987/481ac914-7a7a-4cfb-bec2-522ef32d9e78)
 ![Capture3](https://github.com/mohamedkhairy23/E-commerce/assets/82667987/9fa525de-b049-4751-827f-d3e0f896007e)
