@@ -1,6 +1,6 @@
 ## Project Demo Link https://proshop-h1le.onrender.com/
 
-## Features:
+## Features and what is I used in this project:
 - JWT authentication (JSON web tokens) with HTTP-Only cookie
 - Redux tool kit for managing global state
 - React-Bootstrap UI library
