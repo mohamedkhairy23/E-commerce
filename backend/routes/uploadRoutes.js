@@ -16,13 +16,13 @@ const storage = multer.diskStorage({
 });
 
 function checkFileType(file, cb) {
-  const filetypes = /jpg|jpeg|png/;
+  const filetypes = /jpg|jpeg|png|webp/;
   const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
   const mimetype = filetypes.test(file.mimetype);
   if (extname && mimetype) {
     return cb(null, true);
   } else {
-    cb("Images Only");
+    cb(new Error("Images Only"), false);
   }
 }
 
@@ -34,7 +34,7 @@ const upload = multer({
   },
 });
 
-router.post("/", upload.single("image"), (req, res) => {
+router.post("/", upload.single("image"), (err, req, res) => {
   res.send({
     message: "Image Uploaded Successfully",
     image: `/${req.file.path}`,
